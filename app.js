@@ -50,8 +50,6 @@ quantidade:q,
 data:new Date()
 });
 
-alert("Produção registrada");
-
 }
 
 async function registrarVenda(){
@@ -65,8 +63,6 @@ produto:p,
 quantidade:q,
 data:new Date()
 });
-
-alert("Venda registrada");
 
 }
 
