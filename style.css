@@ -3,87 +3,122 @@ body{
 
 margin:0;
 font-family:Segoe UI,Arial;
-background:linear-gradient(120deg,#6a11cb,#2575fc);
-color:white;
-text-align:center;
+background:#f5f6fa;
+color:#2c3e50;
 
 }
 
-#login{
+h1,h2{
+margin:0 0 20px 0;
+}
 
-margin-top:120px;
+#loginPage{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#4f46e5,#9333ea);
+
+}
+
+.loginCard{
+
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+text-align:center;
+width:300px;
 
 }
 
 input,select{
 
+width:100%;
 padding:12px;
-margin:10px;
-border:none;
-border-radius:8px;
-width:200px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:6px;
 
 }
 
 button{
 
-padding:12px 22px;
+width:100%;
+padding:12px;
 border:none;
-border-radius:10px;
-background:#111;
+border-radius:6px;
+background:#4f46e5;
 color:white;
 font-weight:bold;
 cursor:pointer;
 
 }
 
+button:hover{
+opacity:0.9;
+}
+
 header{
 
-background:rgba(0,0,0,0.3);
+background:white;
 padding:20px;
-
-}
-
-nav{
-
-margin-top:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 display:flex;
-justify-content:center;
-gap:20px;
+justify-content:space-between;
+align-items:center;
 
 }
 
-.tab{
+nav button{
+
+width:auto;
+margin-left:10px;
+
+}
+
+.page{
 
 padding:40px;
+max-width:1000px;
+margin:auto;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+.form{
+
+max-width:400px;
+margin:auto;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+th,td{
+
+padding:12px;
+border-bottom:1px solid #eee;
+text-align:left;
 
 }
 
 .hidden{
 
 display:none;
-
-}
-
-table{
-
-margin:auto;
-border-collapse:collapse;
-background:white;
-color:black;
-
-}
-
-th,td{
-
-padding:14px 24px;
-border:1px solid #ddd;
-
-}
-
-canvas{
-
-max-width:600px;
-margin:auto;
 
 }

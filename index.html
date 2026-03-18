@@ -7,7 +7,6 @@
 <title>STOCKLY</title>
 
 <link rel="stylesheet" href="style.css">
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
@@ -18,36 +17,43 @@
 
 <body>
 
-<div id="login">
-
+<div id="loginPage">
+<div class="loginCard">
 <h1>STOCKLY</h1>
-<p>Sistema de Controle de Estoque</p>
+<p>Controle de Estoque</p>
 
 <input id="user" placeholder="Usuário">
 <input id="pass" type="password" placeholder="Senha">
 
 <button onclick="login()">Entrar</button>
-
 </div>
+</div>
+
 
 <div id="app" class="hidden">
 
 <header>
-
 <h1>STOCKLY</h1>
-
-<nav>
+<nav id="menuFG" class="hidden">
 <button onclick="openTab('producao')">Produção</button>
 <button onclick="openTab('venda')">Venda</button>
 <button onclick="openTab('estoque')">Estoque</button>
-<button id="btnDash" onclick="openTab('dashboard')" class="hidden">Dashboard</button>
 </nav>
-
 </header>
 
-<section id="producao" class="tab">
 
+<section id="dashboard" class="hidden page">
+<h2>Dashboard do Estoque</h2>
+<div class="card">
+<canvas id="grafico"></canvas>
+</div>
+</section>
+
+
+<section id="producao" class="hidden page">
 <h2>Registrar Produção</h2>
+
+<div class="card form">
 
 <select id="prodProd">
 <option>Doce de Banana Tradicional</option>
@@ -57,13 +63,16 @@
 
 <input id="qtdProd" type="number" placeholder="Quantidade">
 
-<button onclick="registrarProducao()">Registrar Produção</button>
+<button onclick="registrarProducao()">Registrar</button>
 
+</div>
 </section>
 
-<section id="venda" class="tab hidden">
 
+<section id="venda" class="hidden page">
 <h2>Registrar Venda</h2>
+
+<div class="card form">
 
 <select id="prodVenda">
 <option>Doce de Banana Tradicional</option>
@@ -73,34 +82,30 @@
 
 <input id="qtdVenda" type="number" placeholder="Quantidade">
 
-<button onclick="registrarVenda()">Registrar Venda</button>
+<button onclick="registrarVenda()">Registrar</button>
+
+</div>
 
 </section>
 
-<section id="estoque" class="tab hidden">
+
+<section id="estoque" class="hidden page">
 
 <h2>Estoque Atual</h2>
 
-<table>
+<div class="card">
 
+<table>
 <thead>
 <tr>
 <th>Produto</th>
 <th>Quantidade</th>
 </tr>
 </thead>
-
 <tbody id="estoqueTabela"></tbody>
-
 </table>
 
-</section>
-
-<section id="dashboard" class="tab hidden">
-
-<h2>Dashboard do Estoque</h2>
-
-<canvas id="grafico"></canvas>
+</div>
 
 </section>
 
